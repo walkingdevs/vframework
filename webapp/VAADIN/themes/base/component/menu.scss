@@ -1,0 +1,65 @@
+@mixin menu {
+.menu {
+    background: $vf-menu-back;
+}
+.menu .valo-menu {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    overflow-y: scroll;
+}
+.menu .valo-menu-subtitle {
+    color: #ccc;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    margin: 0;
+    padding: 4px;
+}
+.menu .valo-menu-subtitle span.v-icon {
+    min-width: 1em;
+    color: rgb(255, 255, 255);
+    text-align: right;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.75)));
+}
+.menu .dock-layout-content .valo-menu-item {
+    -webkit-appearance: none;
+
+    padding: 2px 0;
+    margin: 0;
+    padding-left: 10px;
+    display: block;
+    border: none;
+    position: relative;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    text-align: left;
+}
+
+.menu .valo-menu-item.selected {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    border-top: 1px solid #4b4c4d;
+    border-bottom: 1px solid #353637;
+    border-top-color: #262729;
+    border-bottom-color: #2b2c2e;
+    background: #414243;
+    font-weight: bold;
+    -webkit-transition: none;
+}
+.menu .valo-menu-item.selected .v-icon {
+    color: rgba(255, 255, 255, 1);
+}
+
+.menu .dock-layout-top {
+    color: #fff;
+    border-bottom: 2px solid #353637;
+}
+.menu .dock-layout-top .logout-btn {
+    color: #fff;
+}}

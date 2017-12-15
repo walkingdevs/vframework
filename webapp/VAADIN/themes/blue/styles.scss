@@ -1,0 +1,12 @@
+$v-focus-color: #92CCEF;
+$vf-back: rgb(232, 229, 227);
+$vf-selected: rgba(78, 119, 162, 1);
+$vf-selected-color: rgba(0, 0, 0, 1);
+$vf-menu-back: #006CD8 url(../base/img/sidebar-gradient.png) repeat-y top right;
+$v-panel-background-color: $vf-back;
+
+@import "../base/base";
+
+.blue {
+    @include base;
+}
