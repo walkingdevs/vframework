@@ -1,3 +1,9 @@
 target
 .idea
 *.iml
+demo/target
+framework/target
+demo/*.iml
+demo/.idea
+framework/*.iml
+framework/.idea
