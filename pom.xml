@@ -108,11 +108,11 @@
             <version>2.3.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>fi.mhsund</groupId>
-            <artifactId>collabsketch</artifactId>
-            <version>0.0.2</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>fi.mhsund</groupId>-->
+            <!--<artifactId>collabsketch</artifactId>-->
+            <!--<version>0.0.2</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.vaadin.addons</groupId>
@@ -158,4 +158,17 @@
         <vaadin-version>7.7.12</vaadin-version>
         <vaadin-plugin-version>${vaadin-version}</vaadin-plugin-version>
     </properties>
+    <repositories>
+        <repository>
+            <id>bintray</id>
+            <url>http://dl.bintray.com/walkingdevs/mvn</url>
+        </repository>
+        <repository>
+            <id>vaadin-addons</id>
+            <url>http://maven.vaadin.com/vaadin-addons</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
