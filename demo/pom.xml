@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>demo</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>walkingdevs</groupId>
+            <artifactId>framework</artifactId>
+            <version>0</version>
+        </dependency>
+    </dependencies>
 
 </project>
