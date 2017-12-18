@@ -1,0 +1,10 @@
+#database:
+  # the name of your JDBC driver
+ # driverClass: org.postgresql.Driver
+  # the username
+#  user: postgres
+  # the password
+#  password: admin
+  # the JDBC URL
+  #url: jdbc:h2:./target/example
+#  url: jdbc:postgresql://localhost:5432/sighting
