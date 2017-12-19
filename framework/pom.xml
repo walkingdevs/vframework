@@ -154,6 +154,39 @@
                 <groupId>org.zeroturnaround</groupId>
                 <artifactId>jrebel-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-maven-plugin</artifactId>
+                <version>7.6.7</version>
+                <configuration>
+                    <webappDirectory>webapp/VAADIN/widgetsets</webappDirectory>
+                    <hostedWebapp>webapp/VAADIN/widgetsets</hostedWebapp>
+                    <persistentunitcachedir>${project.build.directory}</persistentunitcachedir>
+                    <deploy>${project.build.directory}/gwt-deploy</deploy>
+                    <compileReport>false</compileReport>
+                    <noServer>true</noServer>
+                    <draftCompile>false</draftCompile>
+                    <style>OBF</style>
+                    <strict>true</strict>
+                </configuration>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <modules>
+                                <module>brains.vframework.AppWidgetSet</module>
+                            </modules>
+                        </configuration>
+                        <goals>
+                            <!--<goal>clean</goal>-->
+                            <!--<goal>resources</goal>-->
+                            <!--<goal>update-theme</goal>-->
+                            <!--<goal>update-widgetset</goal>-->
+                            <!--<goal>compile-theme</goal>-->
+                            <!--<goal>compile</goal>-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>

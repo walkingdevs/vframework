@@ -8,8 +8,6 @@
 
     <inherits name="org.vaadin.kim.countdownclock.CountdownClockWidgetset" />
 
-    <inherits name="collabsketch.WidgetSet" />
-
     <inherits name="com.ejt.vaadin.sizereporter.WidgetSet" />
 
     <inherits name="org.vaadin.hezamu.canvas.Widgetset" />
