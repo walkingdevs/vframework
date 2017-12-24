@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 
 public class LazyHibernateEntityManagerProvider implements EntityManagerProvider{
     private static ThreadLocal <EntityManager>
-        entityManagerThreadLocal = new ThreadLocal<EntityManager>();
+        entityManagerThreadLocal = new ThreadLocal<>();
     @Override
     public EntityManager getEntityManager() {
         return entityManagerThreadLocal.get();
