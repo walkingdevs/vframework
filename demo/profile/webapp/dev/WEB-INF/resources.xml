@@ -1,0 +1,12 @@
+<resources>
+    <Resource id="datasource" type="javax.sql.DataSource">
+        username = sa
+        password =
+        passwordCipher = PlainText
+        jdbcDriver = org.hsqldb.jdbcDriver
+        jdbcUrl = jdbc:hsqldb:mem:dev
+        maxActive = 20
+        maxIdle = 20
+        jtaManaged = true
+    </Resource>
+</resources>

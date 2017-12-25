@@ -1,0 +1,12 @@
+<resources>
+    <Resource id="datasource" type="javax.sql.DataSource">
+        username = postgres
+        password =
+        passwordCipher = PlainText
+        jdbcDriver = org.postgresql.Driver
+        jdbcUrl = jdbc:postgresql://pg:5432/postgres
+        maxActive = 20
+        maxIdle = 20
+        jtaManaged = true
+    </Resource>
+</resources>
