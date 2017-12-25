@@ -1,0 +1,7 @@
+@mixin dock-layout {
+.dock-layout.dock-layout-default .dock-layout-top > .v-slot {
+    border-bottom: 1px solid #ccc;
+}
+.dock-layout.dock-layout-default .dock-layout-bottom > .v-slot {
+    border-top: 1px solid #ccc;
+}}

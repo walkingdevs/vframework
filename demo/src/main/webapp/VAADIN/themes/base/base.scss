@@ -1,0 +1,157 @@
+$v-app-loading-text: "Loading the resources...";
+
+$v-background-color: rgba(255, 255, 255, 1);
+$v-app-background-color: rgba(255, 255, 255, 1);
+
+$v-focus-style: 0 0 1px 1px rgba($v-focus-color, .5);
+
+$v-border-radius: 2px;
+$v-textfield-border-radius: 2px;
+
+$v-font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+$v-font-size: 14px;
+$v-font-color: #000;
+$v-font-weight: 400;
+
+$v-link-text-decoration: none;
+$v-shadow: 0 1px 0 (v-shade 0.2);
+$v-bevel: inset 0 1px 0 v-tint;
+$v-unit-size: 24px;
+$v-gradient: v-linear 6%;
+$v-overlay-shadow: 0 3px 8px v-shade, 0 0 0 1px (v-shade 0.7);
+$v-shadow-opacity: 20%;
+
+$v-selection-overlay-padding-horizontal: 0;
+$v-selection-overlay-padding-vertical: 6px;
+$v-selection-item-border-radius: 0;
+
+$v-layout-margin-top: 4px;
+$v-layout-margin-right: 4px;
+$v-layout-margin-bottom: 4px;
+$v-layout-margin-left: 4px;
+
+//noinspection CssUnknownTarget
+@import "../valo/valo.scss";
+
+@import "component/h-layout";
+@import "component/dock-layout";
+@import "component/error-layout";
+@import "component/menu";
+@import "component/menu-large";
+@import "component/app-layout";
+
+@import "view/login-view";
+@import "view/basic-list-view";
+@import "view/compact-editor-view";
+@import "view/crud-view";
+@import "view/item-form-view";
+
+@mixin base {
+    @include valo;
+    @include menu;
+    @include menu-large;
+    @include app-layout;
+    @include login-view;
+    @include basic-list-view;
+    @include h-layout;
+    @include dock-layout;
+    @include error-layout;
+    @include compact-editor-view;
+    @include crud-view;
+    @include item-form-view;
+
+    /* --------------------------------------------------------------------------------------------------------- Override */
+    .v-loading-indicator {
+        background: $vf-selected !important;
+    }
+    .v-table {
+        color: #000;
+        background: #e8e5e3;
+    }
+    .v-table .v-table-body {
+        overflow-x: hidden;
+    }
+    .v-window {
+        color: #000;
+    }
+
+    /*
+    tr.v-selected {
+        background: $vf-selected !important;
+    }
+    .gwt-MenuItem-selected {
+        background: $vf-selected !important;
+    }
+    */
+
+    &.v-app {
+        background: $vf-back;
+    }
+    .text-readonly {
+        background: $vf-back;
+    }
+    .v-form-errormessage {
+        display: none;
+    }
+    .v-tabsheet-tabitem .v-caption {
+        color: $v-font-color !important;
+    }
+    .v-tabsheet-tabitem-selected .v-caption {
+        background: $vf-back !important;
+        color: $vf-selected-color !important;
+        font-weight: bold;
+    }
+    .v-checkbox label {
+        font-size: 13px !important;
+    }
+
+    /* ----------------------------------------------------------------------------------------------------------- Styles */
+    .primary-button {
+        @include valo-button-style($background-color: white);
+        font-weight: bold;
+    }
+
+    .toolbar-default {
+        background: -moz-linear-gradient(top, rgba(240, 240, 240, 0.6) 0%, rgba(240, 240, 240, 0) 30%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(240, 240, 240, 0.6)), color-stop(30%, rgba(240, 240, 240, 0)));
+        background: -webkit-linear-gradient(top, rgba(240, 240, 240, 0.6) 0%, rgba(240, 240, 240, 0) 30%);
+        background: -o-linear-gradient(top, rgba(240, 240, 240, 0.6) 0%, rgba(240, 240, 240, 0) 30%);
+        background: -ms-linear-gradient(top, rgba(240, 240, 240, 0.6) 0%, rgba(240, 240, 240, 0) 30%);
+    }
+    .vf-window-bottom-toolbar {
+        background: rgb(222, 219, 217);
+        border-top: 1px solid #bbb;
+    }
+
+    .app-header {
+        margin-top: 4px;
+        margin-left: 4px;
+    }
+
+    .app-header .brains {
+        font-size: 10px;
+        color: #999999;
+        text-transform: uppercase;
+    }
+
+    .app-header .app {
+        font-size: 13px;
+        color: #999999;
+        text-transform: uppercase;
+    }
+
+    .no-border {
+        border: none !important;
+    }
+
+    div.no-border > input {
+        border: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .circle-btn {
+        border-radius: 50px !important;
+        padding: 0 6px !important;
+    }
+}

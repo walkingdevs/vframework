@@ -1,0 +1,15 @@
+@mixin compact-editor-view {
+.compact-editor-view {
+    background: $vf-back;
+}
+.compact-editor-view .title {
+    overflow-x: hidden;
+}
+.compact-editor-view .dock-layout-top {
+    background: $vf-back;
+}
+.compact-editor-view .dock-layout-content {
+}
+.compact-editor-view .new {
+    background: rgba($v-focus-color, 0.5);
+}}

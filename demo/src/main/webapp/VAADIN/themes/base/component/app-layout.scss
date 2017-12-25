@@ -1,0 +1,100 @@
+@mixin app-layout {
+.app-layout {
+    background: $vf-menu-back;
+}
+.app-layout .dock-layout-content {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    overflow-y: none;
+}
+.app-layout .dock-layout-content-inner {
+    overflow-y: scroll;
+}
+.app-layout .dock-layout-top {
+    color: #fff;
+    border-bottom: 2px solid #353637;
+}
+.menu .dock-layout-top .logout-btn {
+    color: #fff;
+}
+.app-layout .v-ddwrapper {
+    padding: 2px;
+}
+
+.app-layout .v-ddwrapper .v-nativebutton {
+    margin: -2px -2px;
+}
+
+.app-layout .v-ddwrapper-over {
+    padding: 0;
+    border: 2px solid #2d90f3;
+    background: transparent;
+}
+.app-layout .v-nativebutton .v-icon  {
+    font-size: 30px;
+}
+.app-layout .v-nativebutton {
+    -webkit-appearance: none;
+
+    display: block;
+    padding: 4px 0;
+    width: 100%;
+    border: none;
+    margin: 0;
+    position: relative;
+
+    border-top: 1px solid #4b4c4d;
+    border-top-color: rgba(255,255,255,.05);
+
+    border-bottom: 1px solid #353637;
+    border-bottom-color: rgba(0,0,0,.18);
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    text-align: center;
+}
+
+.app-layout .v-nativebutton.selected {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    border-top: 1px solid #4b4c4d;
+    border-bottom: 1px solid #353637;
+    border-top-color: #262729;
+    border-bottom-color: #2b2c2e;
+    background: #414243;
+    font-weight: bold;
+    -webkit-transition: none;
+}
+.app-layout:after {
+    content: "";
+    display: block;
+    border-top: 1px solid #4b4c4d;
+    border-top-color: rgba(255,255,255,.05);
+    height: 0;
+}
+
+.app-layout .v-nativebutton-caption {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin: .2em 0 0 0;
+}
+
+.app-layout .v-nativebutton:focus {
+    outline: none;
+}
+
+.app-layout .v-nativebutton:hover,
+.app-layout .v-nativebutton:focus {
+    color: #e1e1e1;
+}
+
+.app-layout .v-nativebutton:before {
+    font-size: 20px;
+    line-height: 1;
+    margin: 0;
+}}

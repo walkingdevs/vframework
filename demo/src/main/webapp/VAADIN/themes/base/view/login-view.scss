@@ -1,0 +1,33 @@
+@mixin login-view {
+.login-layout {
+    position: relative;
+    z-index: 2;
+}
+.login-panel {
+    background: #E6E6E6;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.5);
+    padding: 1em 1em 2em;
+}
+.login-panel .labels,
+.login-panel .fields {
+    display: block;
+}
+.login-panel .v-textfield {
+    width: 170px;
+}
+.login-panel .h2 {
+    padding: 0;
+    font-size: 20px;
+    color: #c4cacf;
+    letter-spacing: -0.05em;
+}
+.login-panel .error {
+    color: #CC0000;
+    font-size: 13px;
+    height: 20px;
+    padding-left: 14px;
+}
+.login .login-bg {
+    opacity: 1;
+}}
