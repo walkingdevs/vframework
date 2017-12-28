@@ -7,17 +7,15 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
 @NamedQueries({
     @NamedQuery(name = "Player.findByName", query = "SELECT p FROM Player p WHERE p.name = :name ORDER BY p.id")
 })
 @Table(name = "PLAYER")
-public class Player extends AbstractDomain {
+public class Player extends AbstractEntity {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "player", cascade = CascadeType.ALL)
-    private List<Score> scoreList;
+    private List<Scorre> scoreList;
 
     @NotNull
     @Size(min = 3, max = 45)
@@ -30,11 +28,11 @@ public class Player extends AbstractDomain {
     private String login;
 
     @JsonIgnore
-    public List<Score> getScoreList() {
+    public List<Scorre> getScoreList() {
         return scoreList;
     }
 
-    public void setScoreList(List<Score> scoreList) {
+    public void setScoreList(List<Scorre> scoreList) {
         this.scoreList = scoreList;
     }
 

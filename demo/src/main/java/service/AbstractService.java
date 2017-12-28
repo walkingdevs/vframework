@@ -1,14 +1,15 @@
 package service;
 
-import dao.AbstractDAO;
+import com.google.inject.Inject;
+import dao.Dao;
 import io.dropwizard.util.Generics;
 
-import javax.inject.Inject;
 import java.util.List;
 
-public class AbstractService<T> {
+public abstract class AbstractService<T> {
+
     @Inject
-    protected AbstractDAO dao;
+    protected Dao dao;
 
     protected final Class<T> entityClass;
 
@@ -36,4 +37,3 @@ public class AbstractService<T> {
         dao.removeById(entityClass, id);
     }
 }
-

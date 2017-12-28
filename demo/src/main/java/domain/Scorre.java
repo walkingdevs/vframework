@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "SCORE")
-public class Score extends AbstractDomain {
+public class Scorre extends AbstractEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Player player;

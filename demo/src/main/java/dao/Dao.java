@@ -3,7 +3,8 @@ package dao;
 import java.util.List;
 import java.util.Map;
 
-public interface AbstractDAO {
+public interface Dao {
+
     <T> void persist(T object);
 
     <T, ID> T findById(Class<T> clazz, ID id);
@@ -17,5 +18,4 @@ public interface AbstractDAO {
     <T> List<T> findAll(Class clazz);
 
     <T> List<T> find(Class<T> clazz, String namedQuery, Map<String, Object> paramsMap);
-
 }

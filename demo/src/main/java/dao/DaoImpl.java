@@ -10,13 +10,14 @@ import java.util.List;
 import java.util.Map;
 
 @Transactional
-public class AbstractDAOImpl implements AbstractDAO{
+public class DaoImpl implements Dao {
+
     private static final String QUERY_SELECT_ALL = "SELECT o FROM %s o ORDER BY o.id";
 
     private final Provider<EntityManager> entityManager;
 
     @Inject
-    public AbstractDAOImpl(final Provider<EntityManager> entityManager) {
+    public DaoImpl(final Provider<EntityManager> entityManager) {
         this.entityManager = entityManager;
     }
 

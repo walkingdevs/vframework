@@ -20,9 +20,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.hubspot.dropwizard</groupId>
-            <artifactId>dropwizard-guice</artifactId>
-            <version>0.7.0.2</version>
+            <groupId>com.vaadin</groupId>
+            <artifactId>guice-vaadin</artifactId>
+            <version>2.0.0-beta5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
@@ -47,7 +52,7 @@
         <dependency>
             <groupId>com.hubspot.dropwizard</groupId>
             <artifactId>dropwizard-guice</artifactId>
-            <version>1.0.6.0</version>
+            <version>1.0.0.1</version>
         </dependency>
             <dependency>
                 <groupId>com.google.inject</groupId>
@@ -81,7 +86,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>Main</mainClass>
+                    <mainClass>App</mainClass>
                     <arguments>
                         <argument>server</argument>
                         <!--<argument>config.yml</argument>-->
