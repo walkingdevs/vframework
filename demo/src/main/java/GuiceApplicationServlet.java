@@ -1,12 +1,12 @@
 import com.vaadin.annotations.VaadinServletConfiguration;
-import com.vaadin.guice.annotation.PackagesToScan;
+import com.vaadin.guice.annotation.Configuration;
 import com.vaadin.guice.server.GuiceVaadinServlet;
+import view.MainUI;
 
 import javax.servlet.annotation.WebServlet;
 
-//@WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
 @WebServlet(urlPatterns = "/foo/*", name = "MyUIServlet", asyncSupported = true)
 @VaadinServletConfiguration(ui = MainUI.class, productionMode = false)
-@PackagesToScan("")
+@Configuration(modules = SModule.class, basePackages = "view")
 public class GuiceApplicationServlet extends GuiceVaadinServlet{
 }

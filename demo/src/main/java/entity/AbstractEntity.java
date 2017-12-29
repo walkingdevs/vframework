@@ -1,5 +1,4 @@
-package domain;
-
+package entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,8 +6,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
 @MappedSuperclass
-public abstract class AbstractEntity implements Serializable {
+public class AbstractEntity  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

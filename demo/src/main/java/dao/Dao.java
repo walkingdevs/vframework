@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 public interface Dao {
-
     <T> void persist(T object);
 
     <T, ID> T findById(Class<T> clazz, ID id);

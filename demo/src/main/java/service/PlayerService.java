@@ -1,7 +1,7 @@
 package service;
 
 import com.google.common.collect.ImmutableMap;
-import domain.Player;
+import entity.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,4 +17,3 @@ public class PlayerService extends AbstractService<Player> {
         }
     }
 }
-

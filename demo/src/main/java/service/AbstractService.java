@@ -1,9 +1,9 @@
 package service;
 
-import com.google.inject.Inject;
 import dao.Dao;
 import io.dropwizard.util.Generics;
 
+import javax.inject.Inject;
 import java.util.List;
 
 public abstract class AbstractService<T> {

@@ -1,6 +1,6 @@
 package service;
 
-import domain.Scorre;
+import entity.Score;
 
-public class ScoreService extends AbstractService<Scorre>{
+public class ScoreService extends AbstractService<Score> {
 }

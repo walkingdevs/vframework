@@ -1,4 +1,4 @@
-package domain;
+package entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -15,7 +15,7 @@ import java.util.List;
 public class Player extends AbstractEntity {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "player", cascade = CascadeType.ALL)
-    private List<Scorre> scoreList;
+    private List<Score> scoreList;
 
     @NotNull
     @Size(min = 3, max = 45)
@@ -28,11 +28,11 @@ public class Player extends AbstractEntity {
     private String login;
 
     @JsonIgnore
-    public List<Scorre> getScoreList() {
+    public List<Score> getScoreList() {
         return scoreList;
     }
 
-    public void setScoreList(List<Scorre> scoreList) {
+    public void setScoreList(List<Score> scoreList) {
         this.scoreList = scoreList;
     }
 
@@ -52,3 +52,4 @@ public class Player extends AbstractEntity {
         this.login = login;
     }
 }
+

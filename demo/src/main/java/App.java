@@ -1,16 +1,13 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.google.inject.persist.PersistFilter;
 import com.google.inject.persist.jpa.JpaPersistModule;
-import com.google.inject.servlet.GuiceFilter;
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import resource.HomeResource;
 import resource.PlayerResource;
 
-import javax.servlet.DispatcherType;
-import java.util.EnumSet;
 import java.util.Properties;
 
 public class App extends Application<Config> {
@@ -20,25 +17,16 @@ public class App extends Application<Config> {
     }
 
     @Override
-    public void initialize(Bootstrap<Config> bootstrap) {
-        bootstrap.addBundle(new VaadinBundle(GuiceApplicationServlet.class, "/foo/*"));
-    }
-
-//    @VaadinServletConfiguration(ui = MainUI.class, productionMode = false)
-//    public static class Servlet extends VaadinServlet {
-//        // empty
-//    }
-
-
-    @Override
     public void run(Config conf, Environment env) throws Exception {
-        final Injector injector = Guice.createInjector(new AppModule(conf, env), createJpaModule());
-        env.servlets().addFilter("GuiceFilter", new GuiceFilter())
-            .addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/foo/*");
-        env.servlets().addServletListeners(new BarContextListener());
-        env.servlets().addFilter("persistFilter", injector.getInstance(PersistFilter.class));
+        final Injector injector = Guice.createInjector(new AppModule(conf, env), createJpaModule(), new SModule());
         env.jersey().register(injector.getInstance(HomeResource.class));
         env.jersey().register(injector.getInstance(PlayerResource.class));
+    }
+
+    @Override
+    public void initialize(Bootstrap<Config> bootstrap) {
+        bootstrap.addBundle(new VaadinBundle(GuiceApplicationServlet.class, "/foo/*"));
+        bootstrap.addBundle(new AssetsBundle("/VAADIN", "/VAADIN", null));
     }
 
     private JpaPersistModule createJpaModule() {

@@ -1,6 +1,6 @@
 package resource;
 
-import domain.Player;
+import entity.Player;
 import service.PlayerService;
 
 import javax.inject.Inject;

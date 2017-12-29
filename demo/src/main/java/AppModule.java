@@ -3,20 +3,17 @@ import com.google.inject.Singleton;
 import dao.Dao;
 import dao.DaoImpl;
 import io.dropwizard.setup.Environment;
-import service.PersonService;
 import service.PlayerService;
 import service.ScoreService;
 
 public class AppModule extends AbstractModule {
-
-     Config configuration;
-     Environment environment;
+    final Config configuration;
+    final Environment environment;
 
     public AppModule(final Config configuration, final Environment environment) {
         this.configuration = configuration;
         this.environment = environment;
     }
-
 
     @Override
     protected void configure() {
@@ -25,6 +22,5 @@ public class AppModule extends AbstractModule {
         bind(Dao.class).to(DaoImpl.class).in(Singleton.class);
         bind(PlayerService.class).in(Singleton.class);
         bind(ScoreService.class).in(Singleton.class);
-        bind(PersonService.class).in(Singleton.class);
     }
 }

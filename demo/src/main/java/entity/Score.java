@@ -1,10 +1,10 @@
-package domain;
+package entity;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "SCORE")
-public class Scorre extends AbstractEntity {
+public class Score extends AbstractEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Player player;
@@ -39,3 +39,4 @@ public class Scorre extends AbstractEntity {
         this.points = points;
     }
 }
+
