@@ -5,6 +5,8 @@ import dao.DaoImpl;
 import io.dropwizard.setup.Environment;
 import service.PlayerService;
 import service.ScoreService;
+import view.Service1;
+import view.ServiceImpl;
 
 public class AppModule extends AbstractModule {
     final Config configuration;
