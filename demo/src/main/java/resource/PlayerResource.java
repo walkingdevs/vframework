@@ -1,6 +1,6 @@
 package resource;
 
-import entity.Player;
+import entity.Person;
 import service.PlayerService;
 
 import javax.inject.Inject;
@@ -23,14 +23,14 @@ public class PlayerResource {
     }
 
     @POST
-    public Player addPlayer(@Valid Player player) {
+    public Person addPlayer(@Valid Person player) {
         playerService.save(player);
         return player;
     }
 
     @GET
     @Path("/{id}")
-    public Player getPlayer(@PathParam("id") Long id) {
+    public Person getPlayer(@PathParam("id") Long id) {
         return playerService.findById(id);
     }
 
@@ -43,12 +43,12 @@ public class PlayerResource {
 
     @GET
     @Path("/find")
-    public List<Player> getPlayerByName(@QueryParam("name") String name) {
+    public List<Person> getPlayerByName(@QueryParam("name") String name) {
         return playerService.findPlayerByName(Optional.ofNullable(name));
     }
 
     @GET
-    public List<Player> getPlayerList() {
+    public List<Person> getPlayerList() {
         return playerService.findAll();
     }
 }

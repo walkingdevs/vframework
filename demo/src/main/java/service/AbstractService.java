@@ -6,7 +6,7 @@ import io.dropwizard.util.Generics;
 import javax.inject.Inject;
 import java.util.List;
 
-public abstract class AbstractService<T> {
+public abstract class AbstractService<T> implements Repo<T>{
 
     @Inject
     protected Dao dao;

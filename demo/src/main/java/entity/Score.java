@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Score extends AbstractEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Player player;
+    private Person player;
 
     @Column(name = "STAGE")
     private Long stage;
@@ -15,11 +15,11 @@ public class Score extends AbstractEntity {
     @Column(name = "POINTS")
     private Long points;
 
-    public Player getPlayer() {
+    public Person getPlayer() {
         return player;
     }
 
-    public void setPlayer(Player player) {
+    public void setPlayer(Person player) {
         this.player = player;
     }
 
