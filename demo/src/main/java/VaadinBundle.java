@@ -8,8 +8,7 @@ import org.eclipse.jetty.server.session.SessionHandler;
 import javax.servlet.Servlet;
 import java.util.Map;
 
-public class VaadinBundle implements Bundle {
-
+public class VaadinBundle implements Bundle{
     private final Map<String, Class<? extends Servlet>> servlets = Maps.newLinkedHashMap();
 
     private final SessionHandler sessionHandler;
