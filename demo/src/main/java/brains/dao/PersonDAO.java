@@ -1,13 +1,20 @@
+package brains.dao;
+
+import com.google.inject.Inject;
+import brains.entity.Person;
 import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
+import ru.vyarus.dropwizard.guice.module.installer.feature.eager.EagerSingleton;
 
 import java.util.List;
 
+@EagerSingleton
 public class PersonDAO extends AbstractDAO<Person> {
+
+    @Inject
     public PersonDAO(SessionFactory factory) {
         super(factory);
     }
-
     public Person findById(Long id) {
         return get(id);
     }
