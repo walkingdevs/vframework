@@ -1,3 +1,5 @@
+package brains;
+
 import com.google.common.collect.Maps;
 import io.dropwizard.Bundle;
 import io.dropwizard.assets.AssetsBundle;

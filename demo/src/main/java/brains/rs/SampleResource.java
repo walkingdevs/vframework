@@ -1,18 +1,24 @@
+package brains.rs;
+
+
+import brains.dao.PersonDAO;
+import brains.entity.Person;
 import com.codahale.metrics.annotation.Timed;
+import com.google.inject.Inject;
 import io.dropwizard.hibernate.UnitOfWork;
 import io.dropwizard.jersey.params.LongParam;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 
-@Path("/rs")
-public class UserResource {
-    private final PersonDAO dao;
+@Path("/sample")
+@Produces("application/json")
+public class SampleResource {
 
-    public UserResource(PersonDAO dao) {
-        this.dao = dao;
-    }
+    @Inject
+    private PersonDAO dao;
 
     @GET
     @Path("/{id}")

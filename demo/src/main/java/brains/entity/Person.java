@@ -1,9 +1,12 @@
+package brains.entity;
+
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement
+@Table(name = "Person")
 public class Person {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
