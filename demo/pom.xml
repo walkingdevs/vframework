@@ -63,6 +63,11 @@
             <artifactId>postgresql</artifactId>
             <version>42.1.4</version>
         </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.196</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -72,18 +77,33 @@
                 <version>${exec-maven-plugin.version}</version>
                 <executions>
                     <execution>
+                        <id>postgres</id>
                         <goals>
                             <goal>java</goal>
                         </goals>
+                        <configuration>
+                            <mainClass>brains.Main</mainClass>
+                            <arguments>
+                                <argument>server</argument>
+                                <argument>postgres.yml</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>h2</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>brains.Main</mainClass>
+                            <arguments>
+                                <argument>server</argument>
+                                <argument>h2.yml</argument>
+                                <!--TODO-->
+                            </arguments>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <mainClass>brains.Main</mainClass>
-                    <arguments>
-                        <argument>server</argument>
-                        <argument>config.yml</argument>
-                    </arguments>
-                </configuration>
             </plugin>
         </plugins>
     </build>
