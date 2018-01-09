@@ -1,7 +1,7 @@
-package dreamsoft;
+package brains;
 
 import brains.vframework.embedded.VaadinBundle;
-import dreamsoft.entity.Person;
+import brains.entity.Person;
 import brains.vframework.embedded.Vframework;
 
 public class Main {
@@ -10,7 +10,7 @@ public class Main {
             .Builder
             .mk()
             .vaadinBundle(new VaadinBundle(GuiceApplicationServlet.class, "/foo/*"))
-            .basePackages("dreamsoft.dao", "dreamsoft.rs")
+            .basePackages("brains.dao", "brains.rs")
             .entities(Person.class)
             .build()
             .run(args);

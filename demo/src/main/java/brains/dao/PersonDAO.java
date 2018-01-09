@@ -1,7 +1,7 @@
-package dreamsoft.dao;
+package brains.dao;
 
 import com.google.inject.Inject;
-import dreamsoft.entity.Person;
+import brains.entity.Person;
 import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
 import ru.vyarus.dropwizard.guice.module.installer.feature.eager.EagerSingleton;

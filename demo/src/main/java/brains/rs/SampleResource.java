@@ -1,8 +1,8 @@
-package dreamsoft.rs;
+package brains.rs;
 
 
-import dreamsoft.dao.PersonDAO;
-import dreamsoft.entity.Person;
+import brains.dao.PersonDAO;
+import brains.entity.Person;
 import com.codahale.metrics.annotation.Timed;
 import com.google.inject.Inject;
 import io.dropwizard.hibernate.UnitOfWork;
@@ -13,7 +13,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-@Path("/sample")
+@Path("/rs")
 @Produces("application/json")
 public class SampleResource {
 
