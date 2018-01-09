@@ -1,7 +1,6 @@
 package brains.vframework.embedded;
 
 import com.google.inject.Module;
-import io.dropwizard.Bundle;
 import io.dropwizard.hibernate.HibernateBundle;
 
 public class VframeworkBuilderImpl implements Vframework.Builder{
@@ -11,7 +10,7 @@ public class VframeworkBuilderImpl implements Vframework.Builder{
         return this;
     }
 
-    public Vframework.Builder vaadinBundle(Bundle vaadinBundle) {
+    public Vframework.Builder vaadinBundle(VaadinBundle vaadinBundle) {
         this.vaadinBundle = vaadinBundle;
         return this;
     }
@@ -30,7 +29,7 @@ public class VframeworkBuilderImpl implements Vframework.Builder{
 
     private Class<?> entity;
     private Class<?>[] entities;
-    private Bundle vaadinBundle;
+    private VaadinBundle vaadinBundle;
     private HibernateBundle<DefaultConfiguration> hibernateBundle;
     private Module module;
     private String [] basePackages;
