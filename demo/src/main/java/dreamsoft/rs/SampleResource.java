@@ -1,8 +1,8 @@
-package brains.rs;
+package dreamsoft.rs;
 
 
-import brains.dao.PersonDAO;
-import brains.entity.Person;
+import dreamsoft.dao.PersonDAO;
+import dreamsoft.entity.Person;
 import com.codahale.metrics.annotation.Timed;
 import com.google.inject.Inject;
 import io.dropwizard.hibernate.UnitOfWork;

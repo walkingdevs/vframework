@@ -1,4 +1,4 @@
-package brains.db;
+package brains.vframework.embedded;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
@@ -7,7 +7,7 @@ import io.dropwizard.db.DataSourceFactory;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-public class ExampleConfiguration extends Configuration {
+public class DefaultConfiguration extends Configuration {
     @Valid
     @NotNull
     private DataSourceFactory database = new DataSourceFactory();
