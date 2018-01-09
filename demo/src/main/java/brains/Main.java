@@ -1,7 +1,7 @@
 package brains;
 
-import brains.vframework.embedded.VaadinBundle;
 import brains.entity.Person;
+import brains.vframework.embedded.VaadinBundle;
 import brains.vframework.embedded.Vframework;
 
 public class Main {
