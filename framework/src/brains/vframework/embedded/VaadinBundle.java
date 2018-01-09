@@ -1,4 +1,4 @@
-package dreamsoft;
+package brains.vframework.embedded;
 
 import com.google.common.collect.Maps;
 import io.dropwizard.Bundle;

@@ -1,5 +1,6 @@
 package dreamsoft;
 
+import brains.vframework.embedded.VaadinBundle;
 import dreamsoft.entity.Person;
 import brains.vframework.embedded.Vframework;
 
