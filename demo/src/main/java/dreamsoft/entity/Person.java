@@ -1,4 +1,4 @@
-package brains.entity;
+package dreamsoft.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;

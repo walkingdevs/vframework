@@ -13,6 +13,52 @@
     <version>0  </version>
 
     <dependencies>
+        <dependency>
+            <groupId>ru.vyarus</groupId>
+            <artifactId>dropwizard-guicey</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>guice-vaadin</artifactId>
+            <version>1.1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-assets</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-hibernate</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.196</version>
+        </dependency>
         <!-- JavaEE 7 API -->
         <dependency>
             <groupId>org.apache.tomee</groupId>
@@ -129,6 +175,7 @@
     <properties>
         <vaadin-version>7.7.12</vaadin-version>
         <vaadin-plugin-version>${vaadin-version}</vaadin-plugin-version>
+        <dropwizard.version>1.2.2</dropwizard.version>
     </properties>
     <build>
         <sourceDirectory>src</sourceDirectory>

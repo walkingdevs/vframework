@@ -1,4 +1,4 @@
-package brains.view;
+package dreamsoft.view;
 
 import brains.vframework.VUI;
 import com.vaadin.annotations.Theme;

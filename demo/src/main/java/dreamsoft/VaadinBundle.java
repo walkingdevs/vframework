@@ -1,4 +1,4 @@
-package brains;
+package dreamsoft;
 
 import com.google.common.collect.Maps;
 import io.dropwizard.Bundle;
