@@ -1,11 +1,12 @@
 package brains.vframework.embedded;
 
 import com.google.inject.AbstractModule;
+import io.dropwizard.hibernate.HibernateBundle;
 import org.hibernate.SessionFactory;
 
 public class DefaultHibernateModule extends AbstractModule {
 
-    public DefaultHibernateModule(DefaultHibernateBundle bundle) {
+    public DefaultHibernateModule(HibernateBundle<DefaultConfiguration> bundle) {
         this.bundle = bundle;
     }
 
@@ -14,5 +15,5 @@ public class DefaultHibernateModule extends AbstractModule {
         bind(SessionFactory.class).toInstance(bundle.getSessionFactory());
     }
 
-    private final DefaultHibernateBundle bundle;
+    private final HibernateBundle bundle;
 }

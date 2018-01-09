@@ -1,6 +1,7 @@
 package brains.vframework.embedded;
 
 import com.google.inject.Module;
+import io.dropwizard.Bundle;
 import io.dropwizard.hibernate.HibernateBundle;
 
 public class VframeworkBuilderImpl implements Vframework.Builder{
@@ -23,13 +24,13 @@ public class VframeworkBuilderImpl implements Vframework.Builder{
 
     public Vframework build() {
         hibernateBundle = new DefaultHibernateBundle(entity, entities);
-        module = new DefaultHibernateModule((DefaultHibernateBundle) hibernateBundle);
+        module = new DefaultHibernateModule(hibernateBundle);
         return new VframeworkImpl(hibernateBundle, module, vaadinBundle, basePackages);
     }
 
     private Class<?> entity;
     private Class<?>[] entities;
-    private VaadinBundle vaadinBundle;
+    private Bundle vaadinBundle;
     private HibernateBundle<DefaultConfiguration> hibernateBundle;
     private Module module;
     private String [] basePackages;
