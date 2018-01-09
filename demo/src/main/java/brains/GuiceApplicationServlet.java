@@ -1,9 +1,9 @@
-package dreamsoft;
+package brains;
 
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.guice.annotation.Configuration;
 import com.vaadin.guice.server.GuiceVaadinServlet;
-import dreamsoft.view.MainUI;
+import brains.view.MainUI;
 
 import javax.servlet.annotation.WebServlet;
 
