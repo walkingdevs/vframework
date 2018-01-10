@@ -20,8 +20,13 @@ public class VframeworkImpl implements Vframework {
     private VaadinBundle vaadinBundle;
     private String [] basePackages;
     @Override
-    public void run(String... args) throws Exception {
-        new Main().run(args);
+    public void run(String... args){
+        try {
+            new Main().run(args);
+            System.out.print("Server started on port 8080");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     private class Main extends Application<DefaultConfiguration>{
         @Override
