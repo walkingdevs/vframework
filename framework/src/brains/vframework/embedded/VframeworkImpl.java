@@ -2,14 +2,13 @@ package brains.vframework.embedded;
 
 import com.google.inject.Module;
 import io.dropwizard.Application;
-import io.dropwizard.Bundle;
 import io.dropwizard.hibernate.HibernateBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
 
 public class VframeworkImpl implements Vframework {
-    public VframeworkImpl(HibernateBundle hibernateBundle, Module module, Bundle vaadinBundle, String... basePackages) {
+    public VframeworkImpl(HibernateBundle hibernateBundle, Module module, VaadinBundle vaadinBundle, String... basePackages) {
         this.hibernateBundle = hibernateBundle;
         this.module = module;
         this.vaadinBundle = vaadinBundle;
@@ -18,7 +17,7 @@ public class VframeworkImpl implements Vframework {
 
     private HibernateBundle hibernateBundle;
     private Module module;
-    private Bundle vaadinBundle;
+    private VaadinBundle vaadinBundle;
     private String [] basePackages;
     @Override
     public void run(String... args) throws Exception {
