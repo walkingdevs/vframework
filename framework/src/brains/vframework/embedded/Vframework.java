@@ -6,8 +6,6 @@ public interface Vframework{
 
         Builder basePackages(String... BasePackages);
 
-        Builder vaadinBundle(VaadinBundle vaadinBundle);
-
         Builder entities(Class<?> entity, Class<?>... entities);
 
         Vframework build();
