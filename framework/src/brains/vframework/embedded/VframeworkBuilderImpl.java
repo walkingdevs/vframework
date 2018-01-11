@@ -17,9 +17,9 @@ public class VframeworkBuilderImpl implements Vframework.Builder{
     }
 
     public Vframework build() {
-        hibernateBundle = new DefaultHibernateBundle(entity, entities);
+        hibernateBundle = new DefaultHibernateBundle(this.entity, this.entities);
         module = new DefaultHibernateModule(hibernateBundle);
-        return new VframeworkImpl(this.hibernateBundle, this.module,  this.basePackages);
+        return new VframeworkImpl(hibernateBundle, module,  this.basePackages);
     }
 
     private Class<?> entity;
