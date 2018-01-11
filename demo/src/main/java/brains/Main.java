@@ -1,7 +1,6 @@
 package brains;
 
 import brains.entity.Person;
-import brains.vframework.embedded.VaadinBundle;
 import brains.vframework.embedded.Vframework;
 
 public class Main {
@@ -9,7 +8,6 @@ public class Main {
         Vframework
             .Builder
             .mk()
-            .vaadinBundle(new VaadinBundle(GuiceApplicationServlet.class, "/foo/*"))
             .basePackages("brains.dao", "brains.rs")
             .entities(Person.class)
             .build()

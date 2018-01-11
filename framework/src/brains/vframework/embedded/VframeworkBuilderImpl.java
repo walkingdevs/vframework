@@ -10,11 +10,6 @@ public class VframeworkBuilderImpl implements Vframework.Builder{
         return this;
     }
 
-    public Vframework.Builder vaadinBundle(VaadinBundle vaadinBundle) {
-        this.vaadinBundle = vaadinBundle;
-        return this;
-    }
-
     public Vframework.Builder entities(Class<?> entity, Class<?>... entities) {
         this.entity = entity;
         this.entities = entities;
@@ -24,12 +19,11 @@ public class VframeworkBuilderImpl implements Vframework.Builder{
     public Vframework build() {
         hibernateBundle = new DefaultHibernateBundle(entity, entities);
         module = new DefaultHibernateModule(hibernateBundle);
-        return new VframeworkImpl(hibernateBundle, module, vaadinBundle, basePackages);
+        return new VframeworkImpl(this.hibernateBundle, this.module,  this.basePackages);
     }
 
     private Class<?> entity;
     private Class<?>[] entities;
-    private VaadinBundle vaadinBundle;
     private HibernateBundle<DefaultConfiguration> hibernateBundle;
     private Module module;
     private String [] basePackages;

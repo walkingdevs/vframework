@@ -8,16 +8,14 @@ import io.dropwizard.setup.Environment;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
 
 public class VframeworkImpl implements Vframework {
-    public VframeworkImpl(HibernateBundle hibernateBundle, Module module, VaadinBundle vaadinBundle, String... basePackages) {
+    public VframeworkImpl(HibernateBundle hibernateBundle, Module module,  String... basePackages) {
         this.hibernateBundle = hibernateBundle;
         this.module = module;
-        this.vaadinBundle = vaadinBundle;
         this.basePackages = basePackages;
     }
 
     private HibernateBundle hibernateBundle;
     private Module module;
-    private VaadinBundle vaadinBundle;
     private String [] basePackages;
     @Override
     public void run(String... args){
@@ -25,7 +23,7 @@ public class VframeworkImpl implements Vframework {
             new Main().run(args);
             System.out.print("Server started on port 8080");
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Server doesn't start");
         }
     }
     private class Main extends Application<DefaultConfiguration>{
@@ -41,7 +39,6 @@ public class VframeworkImpl implements Vframework {
                 .enableAutoConfig(basePackages)
                 .modules(module)
                 .build());
-            bootstrap.addBundle(vaadinBundle);
         }
     }
 }
