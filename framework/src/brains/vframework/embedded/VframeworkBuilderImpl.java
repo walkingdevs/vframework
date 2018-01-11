@@ -16,15 +16,22 @@ public class VframeworkBuilderImpl implements Vframework.Builder{
         return this;
     }
 
-    public Vframework build() {
+    @Override
+    public Vframework.Builder vaadinBundle(VaadinBundle vaadinBundle) {
+        this.vaadinBundle = vaadinBundle;
+        return this;
+    }
+
+    public VframeworkImpl build() {
         hibernateBundle = new DefaultHibernateBundle(this.entity, this.entities);
         module = new DefaultHibernateModule(hibernateBundle);
-        return new VframeworkImpl(hibernateBundle, module,  this.basePackages);
+        return new VframeworkImpl(vaadinBundle, hibernateBundle, module,  this.basePackages);
     }
 
     private Class<?> entity;
     private Class<?>[] entities;
     private HibernateBundle<DefaultConfiguration> hibernateBundle;
+    private VaadinBundle vaadinBundle;
     private Module module;
     private String [] basePackages;
 }

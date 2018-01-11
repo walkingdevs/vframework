@@ -8,12 +8,14 @@ import io.dropwizard.setup.Environment;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
 
 public class VframeworkImpl implements Vframework {
-    public VframeworkImpl(HibernateBundle hibernateBundle, Module module,  String... basePackages) {
+    public VframeworkImpl(VaadinBundle vaadinBundle, HibernateBundle hibernateBundle, Module module,  String... basePackages) {
         this.hibernateBundle = hibernateBundle;
         this.module = module;
         this.basePackages = basePackages;
+        this.vaadinBundle = vaadinBundle;
     }
 
+    private final VaadinBundle vaadinBundle;
     private final HibernateBundle hibernateBundle;
     private final Module module;
     private final String [] basePackages;
@@ -34,6 +36,7 @@ public class VframeworkImpl implements Vframework {
                 .enableAutoConfig(basePackages)
                 .modules(module)
                 .build());
+            bootstrap.addBundle(vaadinBundle);
         }
     }
 }

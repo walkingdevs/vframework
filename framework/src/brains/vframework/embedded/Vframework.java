@@ -8,7 +8,9 @@ public interface Vframework{
 
         Builder entities(Class<?> entity, Class<?>... entities);
 
-        Vframework build();
+        Builder vaadinBundle(VaadinBundle vaadinBundle);
+
+        VframeworkImpl build();
 
         static Vframework.Builder mk(){
             return new VframeworkBuilderImpl();
