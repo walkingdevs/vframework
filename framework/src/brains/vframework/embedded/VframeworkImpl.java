@@ -14,17 +14,12 @@ public class VframeworkImpl implements Vframework {
         this.basePackages = basePackages;
     }
 
-    private HibernateBundle hibernateBundle;
-    private Module module;
-    private String [] basePackages;
+    private final HibernateBundle hibernateBundle;
+    private final Module module;
+    private final String [] basePackages;
     @Override
-    public void run(String... args){
-        try {
+    public void run(String... args) throws Exception {
             new Main().run(args);
-            System.out.print("Server started on port 8080");
-        } catch (Exception e) {
-            System.out.println("Server doesn't start");
-        }
     }
     private class Main extends Application<DefaultConfiguration>{
         @Override
