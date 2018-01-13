@@ -13,7 +13,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-@Path("/rs")
+@Path("/brains/rs")
 @Produces("application/json")
 public class SampleResource {
 
