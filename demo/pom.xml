@@ -38,7 +38,7 @@
                             <mainClass>brains.Main</mainClass>
                             <arguments>
                                 <argument>server</argument>
-                                <argument>postgres.yml</argument>
+                                <argument>prod.yml</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -51,7 +51,7 @@
                             <mainClass>brains.Main</mainClass>
                             <arguments>
                                 <argument>server</argument>
-                                <argument>h2.yml</argument>
+                                <argument>dev.yml</argument>
                                 <!--TODO-->
                             </arguments>
                         </configuration>
