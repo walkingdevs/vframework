@@ -33,6 +33,6 @@ public class SampleResource {
     @Timed
     @UnitOfWork
     public Long postPerson(@PathParam("name") String name) {
-        return dao.create(name);
+        return dao.create(name, name);
     }
 }

@@ -1,5 +1,6 @@
 package brains.vframework.embedded;
 
+import brains.vframework.event.api.ActionListener;
 import com.google.inject.Module;
 import io.dropwizard.hibernate.HibernateBundle;
 
@@ -16,16 +17,20 @@ public class VframeworkBuilderImpl implements Vframework.Builder{
         return this;
     }
 
-    @Override
     public Vframework.Builder vaadinBundle(VaadinBundle vaadinBundle) {
         this.vaadinBundle = vaadinBundle;
+        return this;
+    }
+
+    public Vframework.Builder success(ActionListener action) {
+        this.action = action;
         return this;
     }
 
     public VframeworkImpl build() {
         hibernateBundle = new DefaultHibernateBundle(this.entity, this.entities);
         module = new DefaultHibernateModule(hibernateBundle);
-        return new VframeworkImpl(vaadinBundle, hibernateBundle, module,  this.basePackages);
+        return new VframeworkImpl(vaadinBundle, hibernateBundle, module, this.action, this.basePackages);
     }
 
     private Class<?> entity;
@@ -34,4 +39,5 @@ public class VframeworkBuilderImpl implements Vframework.Builder{
     private VaadinBundle vaadinBundle;
     private Module module;
     private String [] basePackages;
+    private ActionListener action;
 }

@@ -12,6 +12,9 @@ public class Main {
             .basePackages("brains.dao", "brains.rs")
             .entities(Person.class)
             .vaadinBundle(new VaadinBundle(ApplicationServlet.class, "/foo/*"))
+            .success(()->{
+                System.out.println("Server started successfully...");
+            })
             .build()
             .run(args);
     }
