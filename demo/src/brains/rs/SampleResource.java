@@ -13,7 +13,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-@Path("/rs")
+@Path("/brains/rs")
 @Produces("application/json")
 public class SampleResource {
 
@@ -33,6 +33,6 @@ public class SampleResource {
     @Timed
     @UnitOfWork
     public Long postPerson(@PathParam("name") String name) {
-        return dao.create(name);
+        return dao.create(name, name);
     }
 }

@@ -21,8 +21,16 @@
             <artifactId>framework</artifactId>
             <version>0</version>
         </dependency>
+        <dependency>
+            <groupId>org.skyscreamer</groupId>
+            <artifactId>jsonassert</artifactId>
+            <version>1.5.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
+        <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -38,7 +46,7 @@
                             <mainClass>brains.Main</mainClass>
                             <arguments>
                                 <argument>server</argument>
-                                <argument>postgres.yml</argument>
+                                <argument>prod.yml</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -51,7 +59,7 @@
                             <mainClass>brains.Main</mainClass>
                             <arguments>
                                 <argument>server</argument>
-                                <argument>h2.yml</argument>
+                                <argument>dev.yml</argument>
                                 <!--TODO-->
                             </arguments>
                         </configuration>

@@ -27,9 +27,10 @@ public class PersonDAO extends AbstractDAO<Person> {
         return list(namedQuery("com.example.helloworld.core.Person.findAll"));
     }
 
-    public Long create(String name) {
+    public Long create(String name, String lazy) {
         Person person = new Person();
         person.setName(name);
+        person.setLazy(lazy);
         return persist(person).getId();
     }
 }
