@@ -1,4 +1,5 @@
-import brains.ApplicationServlet;
+package brains;
+
 import brains.entity.Person;
 import brains.vframework.embedded.VaadinBundle;
 import brains.vframework.embedded.Vframework;
@@ -19,7 +20,7 @@ public class EmbeddedServerTest extends Assert{
             .success(()->{
             })
             .build()
-            .run("server", "dev.yml");
+            .run("server", "test.yml");
     }
 
     @Test
