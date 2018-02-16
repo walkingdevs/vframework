@@ -4,7 +4,6 @@ import brains.entity.Person;
 import brains.vframework.embedded.VaadinBundle;
 import brains.vframework.embedded.Vframework;
 import org.junit.Assert;
-import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import walkingdevs.http11.ReqBuilder;
 
@@ -23,7 +22,7 @@ public class EmbeddedServerTest extends Assert{
             .run("server", "test.yml");
     }
 
-    @Test
+//    @Test
     public void test() throws Exception {
         start();
         assertEquals(200L, ReqBuilder.GET("http://localhost:3000/foo").build().send().status());
